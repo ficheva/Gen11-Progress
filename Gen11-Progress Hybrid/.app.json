@@ -1,4 +1,51 @@
 {
   "type": "kendo-ui-mobile",
-  "isNew": true
+  "views": [
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "homeView",
+      "components": [],
+      "title": "Home View",
+      "addToNavigation": true,
+      "icon": "home"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "dataListView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:list",
+          "name": "dataListViewModel",
+          "dataProvider": "progressDataProvider",
+          "collection": "dsCustomer",
+          "headerField": "Name",
+          "masterDetails": true,
+          "detailSubHeaderField": "Address",
+          "detailDescriptionField": "Country",
+          "pullToRefresh": false,
+          "endlessScroll": false
+        }
+      ],
+      "title": "Data List",
+      "addToNavigation": true,
+      "icon": "organize"
+    }
+  ],
+  "dataProviders": [
+    {
+      "type": "kendo-ui-mobile:dataProvider",
+      "name": "progressDataProvider",
+      "catalogContent": "[{\"name\":\"dsCustomer\",\"path\":\"/dsCustomer\",\"schema\":{\"type\":\"object\",\"additionalProperties\":false,\"properties\":{\"dsCustomer\":{\"type\":\"object\",\"additionalProperties\":false,\"properties\":{\"eCustomer\":{\"type\":\"array\",\"primaryKey\":[\"CustNum\"],\"items\":{\"additionalProperties\":false,\"properties\":{\"_id\":{\"type\":\"string\",\"name\":\"_id\"},\"CustNum\":{\"type\":\"integer\",\"ablType\":\"INTEGER\",\"default\":0,\"title\":\"\",\"name\":\"CustNum\"},\"Name\":{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"Name\"},\"Address\":{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"Address\"},\"City\":{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"City\"},\"State\":{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"State\"},\"PostalCode\":{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"PostalCode\"},\"Country\":{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"Country\"},\"Phone\":{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"Phone\"},\"TextRowID\":{\"type\":\"string\",\"ablType\":\"ROWID\",\"contentEncoding\":\"base64\",\"default\":null,\"title\":\"\",\"name\":\"TextRowID\"}}}}}}}},\"operations\":[{\"name\":\"OrderRead\",\"path\":\"/OrderRead\",\"type\":\"invoke\",\"verb\":\"put\",\"params\":[{\"name\":\"Filter\",\"type\":\"REQUEST_BODY\"},{\"name\":\"OrderPosition\",\"type\":\"REQUEST_BODY\"}],\"url\":\"/rest/MobilityDemoService/dsCustomer/OrderRead\"},{\"path\":\"\",\"type\":\"update\",\"verb\":\"put\",\"params\":[{\"name\":\"dsCustomer\",\"type\":\"REQUEST_BODY\"}],\"url\":\"/rest/MobilityDemoService/dsCustomer\"},{\"path\":\"\",\"type\":\"create\",\"verb\":\"post\",\"params\":[{\"name\":\"dsCustomer\",\"type\":\"REQUEST_BODY\"}],\"url\":\"/rest/MobilityDemoService/dsCustomer\"},{\"path\":\"\",\"type\":\"delete\",\"verb\":\"delete\",\"params\":[{\"name\":\"dsCustomer\",\"type\":\"REQUEST_BODY\"}],\"url\":\"/rest/MobilityDemoService/dsCustomer\"},{\"name\":\"CustomRead\",\"path\":\"/CustomRead\",\"type\":\"invoke\",\"verb\":\"put\",\"params\":[{\"name\":\"filter\",\"type\":\"REQUEST_BODY\"},{\"name\":\"QryPosition\",\"type\":\"REQUEST_BODY\"}],\"url\":\"/rest/MobilityDemoService/dsCustomer/CustomRead\"},{\"path\":\"?filter={filter}\",\"type\":\"read\",\"verb\":\"get\",\"params\":[],\"url\":\"/rest/MobilityDemoService/dsCustomer?filter={filter}\"}],\"fn\":{\"OrderRead\":{},\"CustomRead\":{}},\"url\":\"/rest/MobilityDemoService/dsCustomer\",\"fields\":{\"eCustomer\":[{\"type\":\"integer\",\"ablType\":\"INTEGER\",\"default\":0,\"title\":\"\",\"name\":\"CustNum\"},{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"Name\"},{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"Address\"},{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"City\"},{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"State\"},{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"PostalCode\"},{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"Country\"},{\"type\":\"string\",\"ablType\":\"CHARACTER\",\"default\":\"\",\"title\":\"\",\"name\":\"Phone\"},{\"type\":\"string\",\"ablType\":\"ROWID\",\"contentEncoding\":\"base64\",\"default\":null,\"title\":\"\",\"name\":\"TextRowID\"}]},\"primaryKeys\":{\"eCustomer\":[\"CustNum\"]},\"_dataSetName\":\"dsCustomer\",\"generic\":{}}]",
+      "title": "Progress Data Service",
+      "source": "jsdo",
+      "url": "https://oemobiledemo.progress.com:8811/MobilityDemoService",
+      "catalogUrl": "https://oemobiledemo.progress.com:8811/MobilityDemoService/static/mobile/MobilityDemoService.json",
+      "authentication": "anonymous"
+    }
+  ],
+  "name": "kendoUiMobileApp",
+  "navigation": "tabstrip",
+  "view": "homeView",
+  "transition": "slide",
+  "skin": "flat"
 }
