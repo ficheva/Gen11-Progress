@@ -1,0 +1,48 @@
+{
+  "ProjectName": "Gen11-Progress Hybrid",
+  "ProjectGuid": "a5235527-cbf7-4c49-9463-084a46897f32",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.Gen11ProgressHybrid",
+  "DisplayName": "Gen11-Progress Hybrid",
+  "Author": "",
+  "Description": "Gen11-Progress Hybrid",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.7.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{b636fe45-330d-42da-88a4-d3fa8834a922}",
+  "WP8ProductID": "{52e4f87c-2943-4db5-bf4d-c17d58476edc}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.Gen11ProgressHybrid",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ],
+  "CorePlugins": [
+    "org.apache.cordova.network-information"
+  ]
+}
